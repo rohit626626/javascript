@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading">Hello</h1>
+        <div id="myfirst" id="first" class=" child red ">Child 1</div>
+    </div>
+</body>
+<script>
+    let divElem = document.createElement('div');
+
+    let val = localStorage.getItem('text');
+    let text;
+    if (val == null) {
+        text = document.createTextNode("this is my element ");
+    } else {
+        text = document.createTextNode(val);
+    }
+    divElem.appendChild(text);
+    divElem.setAttribute('id', 'elem');
+    divElem.setAttribute('class', 'elem');
+    divElem.setAttribute('style', 'border:2px solid black; width:200px; margin:30px; padding:20px');
+
+    let container = document.querySelector('.container');
+    let first = document.getElementById('myfirst');
+
+    container.insertBefore(divElem, first);
+    // console.log(divElem, container, first);
+
+    divElem.addEventListener('click', function() {
+        let noTextAreas = document.getElementsByClassName('textarea').length;
+        if (noTextAreas == 0) {
+            let html = elem.innerHTML;
+            divElem.innerHTML = `<textarea class="textarea fron-control" id="textarea" rows="3">${html}</textarea>`
+        }
+        let textarea = document.getElementById('textarea');
+        textarea.addEventListener('blur', function() {
+            elem.innerHTML = textarea.value;
+            localStorage.setItem('text', textarea.value);
+        })
+    });
+</script>
+
+</html>

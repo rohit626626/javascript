@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+</body>
+<script>
+    function func1() {
+        return new Promise(function(resolve, reject) {
+            setTimeout(() => {
+                const error = true;
+                if (error) {
+                    console.log('Function: Your promise has been resloved')
+                    resolve();
+                } else {
+                    console.log('Function: Your promise has not been resloved')
+                    reject('Sorry not fulfiled');
+                }
+            }, 2000);
+        })
+    }
+    func1().then(function() {
+        console.log("Rohit: Thanks for resolving")
+    }).catch(function(error) {
+        console.log("Rohit: Very bad: Reason: " +
+            error)
+    })
+</script>
+
+</html>

@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+</body>
+<script>
+    // function greet(name, thank) {
+    //     console.log(`How are you ${name} and your message reveived ${thank}`);
+    //     return 4;
+    // }
+
+    function mygreet(name, thank) {
+        let msg = (`How are you ${name} and your message reveived ${thank}`);
+        return msg;
+    }
+
+    let name = "rohit";
+
+    // let val = greet(name, "thaink you");
+    // console.log(val);
+
+    let val1 = mygreet(name, "thaink you");
+    console.log(val1);
+
+    // array
+    const myobj = {
+        name: 'rohan',
+        game: function() {
+            return "GTA"
+        }
+
+    }
+    console.log(myobj.game());
+
+    // arr2
+    arr = ["apple", "mango", "banana"];
+    arr.forEach(function(element, index, array) {
+        console.log(element, index)
+    });
+</script>
+
+</html>

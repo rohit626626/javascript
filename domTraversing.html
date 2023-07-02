@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <h1>This ia html</h1>
+    <h1>Content</h1>
+    <div class="container">
+        <div id="myfirst" class="child red">Child 1</div>
+
+        <ul class="this">
+            <li class="child1">this</li>
+            <li class="child1">is</li>
+            <li class="child1">my</li>
+            <li class="child1">last</li>
+            <li class="child1">list</li>
+        </ul>
+    </div>
+    <div class="no"> This is dummy text </div>
+    <div class="no"> This is dummy text </div>
+    <div class="no"> This is dummy text </div>
+</body>
+<script>
+    let cont = document.querySelector(".no");
+    cont = document.querySelector(".container");
+    console.log(cont);
+
+    let nodeName = cont.childNodes[1]
+    let nodeType = cont.childNodes[1]
+        .nodeType;
+    console.log(cont.nodeName);
+    console.log(cont.nodeType);
+
+    // node types 1. Element 2. Attribute 3. Text Node 8. Comment 9. document 10. docType
+
+    let container = document.querySelector('div.container');
+    console.log(container.children[1].children[0]);
+    // console.log(container.firstChild);
+    // console.log(container.firstElementChild);
+    // console.log(container.lastChild);
+    // console.log(container.firstElementChild);
+    console.log(container.childElementCount);
+    console.log(container.firstElementChild.parentNode);
+    console.log(container.firstElementChild.nextSibling);
+    console.log(container.firstElementChild.nextElementSibling);
+</script>
+
+</html>

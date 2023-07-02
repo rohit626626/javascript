@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+</body>
+<script>
+    let today = new Date();
+    console.log(today);
+
+    otherDate = new Date('8-4-2003 04:22:10');
+    otherDate = new Date('June 13 2005');
+    otherDate = new Date('09/13/2005');
+    console.log(otherDate);
+
+    let a;
+    a = otherDate.getDay();
+    a = otherDate.getDate();
+    a = otherDate.getMinutes();
+    a = otherDate.getSeconds();
+    a = otherDate.getHours();
+    a = otherDate.getTime();
+    a = otherDate.getMilliseconds();
+    a = otherDate.getMonth();
+    console.log(a);
+
+    otherDate.setDate(23);
+    otherDate.setMonth(2);
+    otherDate.setYear(2009);
+    otherDate.setFullYear(2009);
+    otherDate.setMinutes(2);
+    otherDate.setHours(3);
+    otherDate.setSeconds(1);
+    console.log(otherDate);
+</script>
+
+</html>

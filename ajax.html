@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <button type="button" id="fetchBtn" class="btn btn-primary">Fetch Data</button>
+    <button type="button" id="popBtn" class="btn btn-primary">Backup button</button>
+    <div class="container">
+        <h2>Employe List</h2>
+        <ul id="list">
+
+        </ul>
+    </div>
+</body>
+<script>
+    let fetchBtn = document.getElementById('fetchBtn');
+    fetchBtn.addEventListener('click', buttonClickHandler)
+
+    function buttonClickHandler() {
+        console.log("you have clicked the fetchBtn");
+
+        // Instantiate an XMLHttpRequest Object
+        const xhr = new XMLHttpRequest();
+
+        // open the object
+        xhr.open('GET', 'mydata.txt', true);
+
+        // json data from internet
+
+        // xhr.open('GET', 'https://jsonplacejolder.typicode.com/todos/1', true);
+
+        // use this for post
+
+        // xhr.open('POST', 'http://dummy.restapiexample.com/api/vi/create', true);
+        // xhr.getResponseHeader('Content-type', 'application/json');
+
+
+        // what to do on progress(optional)
+        xhr.onprogress = function() {
+            console.log("on progress");
+        }
+
+        xhr.onreadystatechange = function() {
+                console.log("Ready state is", xhr.readyState);
+            }
+            // what to do when response is ready
+        xhr.onload = function() {
+            if (this.status === 200) {
+                console.log(this.responseText);
+            } else {
+                console.log("Error occured");
+            }
+        }
+
+        // send the request for GET method
+        xhr.send();
+
+        // send the request for POST method
+
+        // params=`"name":"rohit", "salary":1234, "age":"23"`;
+        // xhr.send(params);
+    }
+
+
+    // json data 
+    let popBtn = document.getElementById('popBtn');
+    popBtn.addEventListener('click', popHandler)
+
+    function popHandler() {
+        console.log("you have clicked the fetchBtn");
+
+        // Instantiate an XMLHttpRequest Object
+        const xhr = new XMLHttpRequest();
+
+        // open the object
+        xhr.open('GET', 'http://dummy.restapiexample.com/api/v1/employees', true);
+
+        // what to do when response is ready
+        xhr.onload = function() {
+            if (this.status === 200) {
+                let obj = JSON.parse(this.responseText);
+                console.log(obj);
+                let list = document.getElementById('list');
+                str = "";
+                for (key in obj) {
+                    str += `<li>${obj[key].employee_name}</li>`;
+                }
+                list.innerHTML = str;
+            } else {
+                console.log("Error occured");
+            }
+        }
+
+        // send the request
+        xhr.send();
+        console.log("fetching employees");
+
+    }
+</script>
+
+</html>

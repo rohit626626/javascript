@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+</body>
+<script>
+    obj = {
+        name: "rohit",
+        age: 25,
+        pro: "python"
+    }
+    console.log(obj);
+
+    function Obj(givenName) {
+        this.name = givenName
+    }
+    Obj.prototype.getName = function() {
+        return this.name;
+    }
+    let obj2 = new Obj("Amit kumar");
+    console.log(obj2);
+</script>
+
+</html>

@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <h1>Hello</h1>
+</body>
+<script>
+    let impArray = ['apple', 'mange', 'banana'];
+    // set the itme
+    localStorage.setItem('Name', "rohit");
+    localStorage.setItem('Name2', "amit");
+    localStorage.setItem('fruit', JSON.stringify(impArray));
+
+    //clear local storage
+    // localStorage.clear();
+
+    // remove particular item
+    // localStorage.removeItem('Name2');
+    //retrive item
+    let name = localStorage.getItem('Name');
+    name = JSON.parse(localStorage.getItem('fruit'));
+    console.log(name);
+
+    // Session Storage
+    sessionStorage.setItem('Name', "rohit");
+    sessionStorage.setItem('Name2', "amit");
+    sessionStorage.setItem('fruit', JSON.stringify(impArray));
+
+    //clear session storage
+    // sessionStorage.clear();
+</script>
+
+</html>

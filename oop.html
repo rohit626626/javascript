@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+</body>
+<script>
+    let car = {
+        name: 'Maruit 800',
+        topSpeed: 80,
+        run: function() {
+            console.log("car is running");
+        }
+    }
+
+    function GeneralCar(givenName, givenSpeed) {
+        this.name = givenName;
+        this.topSpeed = givenSpeed;
+        this.run = function() {
+            console.log(`${this.name} is Running`);
+        }
+        this.analyze = function() {
+            console.log(`This car is slower by ${200-this.topSpeed} km/H than Mercedes`)
+        }
+    }
+
+    car1 = new GeneralCar('Nissan', 180);
+    car1 = new GeneralCar('Maruti Alto', 80);
+    car1 = new GeneralCar('Marcedes', 200);
+</script>
+
+</html>

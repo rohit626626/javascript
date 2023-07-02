@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <h1>Student List</h1>
+    <div id="students">
+
+    </div>
+</body>
+<script>
+    const students = [{
+        name: "rohit",
+        subject: "javaScript"
+    }, {
+        name: "amit",
+        subject: "python"
+    }]
+
+    function enrollStudent(student) {
+        return new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                students.push(student);
+                console.log("Student has been enrolled");
+                const error = false;
+                if (!error) {
+                    resolve();
+                } else {
+                    reject();
+                }
+            }, 3000);
+
+        })
+    }
+
+    function getStudents() {
+        setTimeout(function() {
+            let str = "";
+            students.forEach(function(student) {
+                str += `<li>${student.name}</li>`
+            });
+            document.getElementById('students').innerHTML = str;
+            console.log("Students have been fetched");
+        }, 1000);
+    }
+
+    let newStudent = {
+        name: "aman",
+        subject: 'html'
+    }
+    enrollStudent(newStudent).then(function() {
+        getStudents();
+    }).catch(function() {
+        console.log("Sorry error occured")
+    });
+</script>
+
+</html>

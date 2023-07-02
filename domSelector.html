@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <h1>This ia html</h1>
+    <h1>Content</h1>
+    <div class="container">
+        <div id="myfirst" class="child red">Child 1</div>
+        <div class="child">Child 2</div>
+        <div class="child">Child 3</div>
+        <div class="child">Child 4</div>
+    </div>
+    <div class="container">
+        <a href="http://google.com">google</a>
+        <a href="http://facebook.com">facebook</a>
+        <a href="http://github.com">github</a>
+        <a href="http://w3school.com">w3school</a>
+    </div>
+</body>
+<script>
+    // elecment selector 1.Single element selector, 2.Multiple elecment selector
+
+    // Single element selector
+    let element = document.getElementById("myfirst");
+    // element = element.className;
+    // element = element.childNodes;
+    // element = element.parentNode;
+    element.style.color = "red";
+    // element.innerText = "Hello how are you";
+    element.innerHTML = "<b>This is html teg</b>";
+    // console.log(element);
+    console.log(element.innerHTML);
+
+    let sel = document.querySelector('#myfirst');
+    // sel = document.querySelector('.child');
+    sel = document.querySelector('div');
+    console.log(sel);
+    sel.style.color = 'green';
+
+    // multiple element selector
+    let elm = document.getElementsByClassName('child');
+    // let elm = document.getElementsByClassName('container');
+    // let elm = document.getElementsByTagName('div');
+    // Array.from(elm).forEach(element => {
+    //     console.log(elm);
+    // });
+    let elem = document.getElementsByClassName('container');
+    console.log(elem[0].getElementsByClassName('child'));
+</script>
+
+</html>

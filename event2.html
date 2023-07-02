@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class='no'>Hello</h1>
+        <form action="none.html" , action="post">
+            Name<input type="text" id="name">
+            <button id="btn">Submit form</button>
+        </form>
+    </div>
+</body>
+<script>
+    let btn = document.getElementById('btn');
+    btn.addEventListener('click', func1);
+
+    function func1(e) {
+        console.log("Thanks", e);
+        e.preventDefault();
+    }
+    document.querySelector('.no').addEventListener('mouseenter', function() {
+        console.log('You enter no');
+    });
+
+    document.querySelector('.container')
+        .addEventListener('mousemove', function(e) {
+            console.log(e.offsetX, e.offsetY);
+            document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetX},154)`;
+            console.log("mouse move event");
+        });
+</script>
+
+</html>

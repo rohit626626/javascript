@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>javaScript program</h1>
+</body>
+
+<script>
+const name = "rohit";
+const greeting = "Good Morning";
+console.log(greeting + ' ' + name);
+
+let htme;
+html = "<h1> this is heading</h1>" +
+    "<p>this is My para</p>";
+html = html.concat('this', ' str2');
+
+console.log(html);
+console.log(html.length);
+console.log(html.toLowerCase());
+console.log(html.toUpperCase());
+console.log(html[1]);
+console.log(html.indexOf('h1'));
+console.log(html.lastIndexOf('<'));
+console.log(html.charAt(3));
+console.log(html.endsWith('kklks'));
+console.log(html.includes('is'));
+console.log(html.substring(1, 6));
+console.log(html.slice(0, 4));
+console.log(html.split(' '));
+console.log(html.replace('this', 'is'));
+
+let fruit1 = "Orange";
+let fruit2 = "Apple";
+let myHtml = `Hello ${name}
+<h1>This is "my" heading</h1>
+<p>You like ${fruit1} and ${fruit2}</p>`;
+document.body.innerHTML = myHtml;
+</script>
+
+</html>

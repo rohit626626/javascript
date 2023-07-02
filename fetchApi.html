@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <div class="container">
+        <button id="myBtn">myBtn</button>
+    </div>
+</body>
+<script>
+    let myBtn = document.getElementById("myBtn");
+    let content = document.getElementById("content");
+    // for local data fetch
+    function getDate() {
+        console.log("Started getData")
+        url = "myfile.txt";
+        fetch(url).then((response) => {
+            console.log("Inside first then")
+            return response.text();
+        }).then((data) => {
+            console.log("Inside second then")
+            console.log(data);
+        })
+    }
+
+    // for fetch data for internet
+
+    function getDate() {
+        console.log("Started getData")
+        url = "https://api.github.com/users";
+        fetch(url).then((response) => {
+            console.log("Inside first then")
+            return response.json();
+        }).then((data) => {
+            console.log("Inside second then")
+            console.log(data);
+        })
+    }
+    console.log("Before running getData")
+    getDate()
+    console.log("After running getData")
+
+    // // post data
+    // function postData() {
+    //     url = "http:..dummy.restapiexample.com.api.v1.create";
+    //     data = '{"name":"aaa", "salary":"2343", "age":"23"}'
+    //     params = {
+    //         method: 'post',
+    //         header: {
+    //             'Content-Type': application / json
+    //         },
+    //         body: data
+    //     }
+    //     fetch(url, params).then((response) => {
+    //         return response.json();
+    //     }).then((data) => {
+    //         console.log(data);
+    //     })
+    // }
+
+    // post data for arrow function
+    function postData() {
+        url = "http:..dummy.restapiexample.com.api.v1.create";
+        data = '{"name":"aaa", "salary":"2343", "age":"23"}'
+        params = {
+            method: 'post',
+            header: {
+                'Content-Type': application / json
+            },
+            body: data
+        }
+        fetch(url, params).then((response) => response.json())
+            .then((data) => console.log(data))
+    }
+</script>
+
+</html>

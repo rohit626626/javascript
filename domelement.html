@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <h1>This ia html</h1>
+    <h1>Content</h1>
+    <div class="container">
+        <div id="myfirst" class="child red">Child 1</div>
+
+        <ul class="this" id='myul'>
+            <li id='fui' class="child1">this</li>
+            <li class="child1">is</li>
+            <li class="child1">my</li>
+            <li class="child1">last</li>
+            <li id='lui' class="child1">list</li>
+        </ul>
+    </div>
+    <div class="no"> This is dummy text </div>
+    <div class="no"> This is dummy text </div>
+    <div class="no"> This is dummy text </div>
+</body>
+<script>
+    let element = document.createElement('li');
+    element.className = 'child1';
+    element.id = 'myid';
+    element.setAttribute('title', 'mytitle');
+    element.innerHTML = '<b>This is html</b>'
+
+    let ul = document.querySelector('ul.this');
+    ul.appendChild(element);
+    console.log(ul);
+    console.log(element);
+
+    let elem2 = document.createElement('h3');
+    elem2.id = 'elem2';
+    elem2.className = 'elem2';
+    let tnode = document.createTextNode('this is a created node for elem2');
+    elem2.appendChild(tnode);
+    element.replaceWith(elem2);
+
+    element.replaceWith(elem2);
+    let myul = document.getElementById('myul');
+    myul.replaceChild(element, document.getElementById('fui'));
+    myul.removeChild(document.getElementById('lui'));
+
+    let pr = elem2.hasAttribute('href');
+    console.log(elem2, pr)
+</script>
+
+</html>

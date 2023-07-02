@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+</body>
+<script>
+    // loop for, while, do while, foreach
+    // for loop
+
+    // for (let i = 0; i < 10; i++) {
+    //     console.log(i);
+    // }
+
+    // while loop
+
+    // let j = 0;
+    // while (j < 10) {
+    //     console.log(j);
+    //     j++;
+    // }
+
+    // do while loop
+    let k = 0;
+    do {
+        console.log(k);
+        k++;
+    }
+    while (k < 5);
+
+    // break
+    let j = 10;
+    while (j < 20) {
+        if (j == 15) {
+            break;
+        }
+        console.log(j);
+        j++;
+    }
+
+    // continue
+    let m = 10;
+    while (m < 20) {
+        if (m == 17) {
+            m++;
+            continue;
+        }
+        console.log(m);
+        m++;
+    }
+
+    // foreach loop
+    let arr = [2, 3, 4, 1, 5];
+    arr.forEach(function(element, index, array) {
+        console.log(element, index, array)
+    });
+
+    // secound type
+    let arr2 = [3, 6, 4, 2, 5];
+    for (let i = 0; i < arr2.length; i++) {
+        const element = arr2[i];
+        console.log(element)
+
+    }
+
+    // object on loop
+    let obj = {
+        name: "rohit",
+        age: 23,
+        os: 'window'
+    }
+
+    for (let key in obj) {
+        console.log(obj[key])
+    }
+</script>
+
+</html>

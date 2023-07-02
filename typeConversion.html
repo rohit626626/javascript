@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>javaScript program</h1>
+</body>
+
+<script>
+// type conversion
+let myVar = String(34);
+console.log(myVar, (typeof myVar));
+
+let booleanVar = String(true);
+console.log(booleanVar, (typeof booleanVar));
+
+let date = String(new Date());
+console.log(date, (typeof date));
+
+let myArr = String([3, 5, 3, 8, 1]);
+console.log(myArr, (typeof myArr));
+
+let i = 75;
+console.log(i.toString());
+
+let numVar = Number("3434");
+console.log(numVar, (typeof numVar));
+
+let numVar2 = Number(false);
+console.log(numVar2, (typeof numVar2));
+
+let numVar3 = Number([1, 2, 3, 6, 5]);
+console.log(numVar3, (typeof numVar3));
+
+let numVar4 = parseInt("3434.9999455");
+console.log(numVar4, (typeof numVar4));
+
+let numVar5 = parseFloat("3434.9999455");
+console.log(numVar5.toFixed(4), (typeof numVar5));
+</script>
+
+</html>
